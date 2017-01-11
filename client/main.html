@@ -3,11 +3,36 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  {{import}}
+  {{> nav}}
+  <h1>This Website is under construction!</h1>
 
   {{> hello}}
   {{> info}}
 </body>
+
+<template name="nav">
+  <div class="nav">
+        <div class ="row hidden-mobile">
+          
+        </div>
+
+          <div class="col-tablet-9 nav-element">
+            <nav class= "">
+              <ul>
+                <li><a href="">Brutto Netto Rechner</a></li>
+                <li><a href="">Gehaltsvergleich</a></li>
+                <li><a href="">Berufe</a></li>
+                <li><a href="">Branchen</a></li>
+                <li><a href="">Jobbörse</a></li>
+                <li><a href="">Karriere A-Z</a></li>
+                <li><a href="">News</a></li>
+              </ul>
+            </nav>
+          </div>
+  </div>
+</template>
+
 
 <template name="hello">
   <button>Click Me</button>
