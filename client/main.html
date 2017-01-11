@@ -3,48 +3,60 @@
 </head>
 
 <body>
-  {{import}}
-  {{> nav}}
   <h1>This Website is under construction!</h1>
+  {{> nav}}
+  {{> header}}
+  {{> content}}
+  {{> footer}}
 
-  {{> hello}}
-  {{> info}}
 </body>
+
 
 <template name="nav">
   <div class="nav">
-        <div class ="row hidden-mobile">
-          
-        </div>
+    <div class ="row">
 
-          <div class="col-tablet-9 nav-element">
-            <nav class= "">
-              <ul>
-                <li><a href="">Brutto Netto Rechner</a></li>
-                <li><a href="">Gehaltsvergleich</a></li>
-                <li><a href="">Berufe</a></li>
-                <li><a href="">Branchen</a></li>
-                <li><a href="">Jobbörse</a></li>
-                <li><a href="">Karriere A-Z</a></li>
-                <li><a href="">News</a></li>
-              </ul>
-            </nav>
-          </div>
+      <div class="col-mobile-12">
+        <div class="col-mobile-4 logo">
+          <!-- Insert Logo-->
+          Logo
+        </div>
+        <div class="col-mobile-8 burger-menu">
+          <!-- Insert Burger Menu -->
+          Burger Menu
+        </div>
+      </div>
+
+    </div> 
+  </div>
+</template>
+
+<template name="header">
+  <div class="row">
+    <div class ="col-mobile-12 header">
+      <!-- insert header / page title here -->
+      Page Title
+    </div>
+  </div>
+</template>
+
+<template name="content">
+  <div class="row">
+    <div class ="col-mobile-12 content">
+      <!-- insert content here -->
+      Content
+    </div>
+  </div>
+</template>
+
+<template name="footer">
+  <div class="row">
+    <div class ="col-mobile-12 footer">
+      <!-- insert Footer here -->
+      Footer
+    </div>
   </div>
 </template>
 
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-</template>
 
-<template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
-  </ul>
-</template>
