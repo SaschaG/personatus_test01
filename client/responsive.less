@@ -1,0 +1,52 @@
+/*für Mobile*/
+.gridLoop(@counter, @device) when (@counter >= 0) {
+  	
+  	.col-@{device}-@{counter} {
+		width: (@counter / 12 *100%);
+		position: relative;
+		min-height: 1px;
+		float: left;
+		box-sizing: border-box;
+	}
+	.gridLoop((@counter - 1), @device);    
+}
+
+.visible-desktop {
+	display: none;
+}
+
+/* Mobile Grid*/
+.gridLoop(12, mobile);
+
+@media(max-width:799px){
+	.hidden-mobile {
+	   	display: none !important;
+	}
+}
+
+
+/* Tablet Grid*/
+@media(min-width:800px){
+	.gridLoop(12, tablet);
+
+	.hidden-tablet {
+	  		display: none !important;
+	}
+}
+
+
+/* Desktop Grid*/
+@media(min-width:1366px){
+	.gridLoop(12, desktop);
+
+	.hidden-desktop {
+  		display: none !important;
+  	}
+
+  	.visible-desktop {
+  		display: block !important;
+  	}
+}
+
+
+

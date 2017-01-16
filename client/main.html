@@ -1,33 +1,45 @@
 <head>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans|Play:700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Orbitron:500' rel='stylesheet' type='text/css'>
   <title>personatus_test01</title>
 </head>
 
 <body>
   <h1>This Website is under construction!</h1>
-  {{> nav}}
+  {{> navbar}}
   {{> header}}
   {{> content}}
   {{> footer}}
 
 </body>
 
-
-<template name="nav">
-  <div class="nav">
+<template name="navbar">
+  <div class="navbar">
     <div class ="row">
-
       <div class="col-mobile-12">
-        <div class="col-mobile-4 logo">
-          <!-- Insert Logo-->
-          Logo
+        <div class="col-mobile-4 col-tablet-3 col-desktop-2 initials logo">
+          {{> logo}}
         </div>
-        <div class="col-mobile-8 burger-menu">
-          <!-- Insert Burger Menu -->
-          Burger Menu
+
+        <div class="col-mobile-8  col-tablet-9 col-desktop-10 nav">
+          {{> nav}}
         </div>
       </div>
+    </div>
+  </div>
+</template>
 
-    </div> 
+<template name="logo">
+   SG
+</template>
+
+<template name="nav">
+  <div class="col-mobile-12 hidden-desktop">
+    Burger Menu
+  </div>
+
+  <div class="col-desktop-12 visible-desktop">
+    Menu
   </div>
 </template>
 
