@@ -1,30 +1,59 @@
-@main-color: #1a222f;
-@sub-color-1: #fff;
-@sub-color-2: #d24335;
-
-@padding: 10px;
-//@sub-color-2: ;
+@import "design_variables.import.less";
 
 body{
+	font-family: @font-standart;
 	padding: 0px;
 	margin: 0px;
+}
+
+.resume-switchbar{
+	text-align: center;
+
+	.button-selected{
+		margin-top: 20px;
+		margin-left: 40px;
+		margin-right: 40px;
+		.button-color-sheme-1;
+		border: solid 3px @main-color;
+	    padding: 8px 16px;
+	    text-align: center;
+	    text-decoration: none;
+	    display: inline-block;
+	    font-size: 18px;
+	    border-radius: 15px;
+	}
+	.button-inactive{
+		.button-selected;
+		.button-color-sheme-2;
+
+	}
+	.button-inactive:hover{
+		.button-color-sheme-3;
+		//border: solid 3px @sub-color-2;
+	}
+}
+.responsive-container{
+	margin-top: 60px;
 }
 
 .navbar{
 	background-color: @main-color;
 	color: @sub-color-1;
 	height: 60px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 100;
 }
 
+
 .nav{
-	background-color: @main-color;
 	padding-top:32px; 
 }
 
 .initials{
 	color: @sub-color-2;
-	background-color: @main-color;
-	font-family: Orbitron;
+	font-family: @font-headline-1;
 	text-align: center;
 	font-size: 36pt;
 }
@@ -35,7 +64,16 @@ body{
 }
 
 .header{
+	width: 100%;
+	height: 200px;
+	background:url(images/Nebula2.png);
 	border: solid 1px #222;
+	color: @sub-color-1;
+	h1{
+		font-family: @font-headline-1;
+		font-size: 72px;
+		text-align: center;
+	}
 }
 
 .content{
@@ -43,6 +81,9 @@ body{
 }
 
 .footer{
-	border: solid 1px #222;
+	padding: @padding;
+	color: @sub-color-1;
+	background-color: @main-color;
+	
 }
 

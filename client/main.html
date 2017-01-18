@@ -5,15 +5,19 @@
 </head>
 
 <body>
-  <h1>This Website is under construction!</h1>
+  
   {{> navbar}}
-  {{> header}}
-  {{> content}}
-  {{> footer}}
+  
+  <div class="responsive-container">
+    {{> header}}
+    {{> content}}
+    {{> footer}}
+  </div>
 
 </body>
 
 <template name="navbar">
+
   <div class="navbar">
     <div class ="row">
       <div class="col-mobile-12">
@@ -27,6 +31,7 @@
       </div>
     </div>
   </div>
+
 </template>
 
 <template name="logo">
@@ -47,7 +52,7 @@
   <div class="row">
     <div class ="col-mobile-12 header">
       <!-- insert header / page title here -->
-      Page Title
+      <h1> Lebenslauf</h1>
     </div>
   </div>
 </template>
@@ -55,8 +60,15 @@
 <template name="content">
   <div class="row">
     <div class ="col-mobile-12 content">
+
+      <div class="resume-switchbar">
+        <button class="button-selected"> Portfolio </button>
+        <button class="button-inactive"> Lebenslauf </button>
+      </div>
       <!-- insert content here -->
-      Content
+      <h1>This Website is under construction!</h1>
+
+      {{>irum}}
     </div>
   </div>
 </template>
@@ -69,6 +81,7 @@
     </div>
   </div>
 </template>
+
 
 
 
