@@ -1,0 +1,73 @@
+@import "design_variables.import.less";
+
+
+label{
+  font-size: 28px;
+  font-family: 'Orbitron', sans-serif;
+  color: #666;
+  margin-right: 100px;
+}
+
+label::after{
+  content:'';
+  display:block;
+  position: relative;
+  top: 3px;
+  left: 5px;
+  z-index: -1;
+  height: 5px;
+  background-color: #212B3C;
+  background: linear-gradient(to right, #212B3C 75%, transparent);
+  width: 0px;
+  transition: width 1s;
+}
+label:hover:after{
+  width: 250px;
+  transition: width 1s;
+}
+
+
+
+label:hover{
+  cursor: pointer;
+  color: #000;
+  transition: color 2s;
+}
+
+
+input[type=radio]{
+  visibility: hidden;
+}
+
+.checked{
+  display: inline-block;
+  position: relative;
+  top: 12px;
+  left: -20px;
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 2%;
+  box-shadow: 0 0 0 6px #fff, 0 0 0 12px #212B3C;
+  transition: border-radius 0.4s, background-color 0.6s;
+}
+
+input[type=radio]:checked + label{
+  color: #000;
+}
+
+input[type=radio]:checked + label .checked{
+  background-color: #d24335;
+  border-radius: 100%;
+  transition: border-radius 0.8s, background-color 1.2s;
+}
+
+
+input[type=radio]:checked + label:after{
+  width: 250px;
+  height: 5px;
+  /*background-color: #88f; */
+  
+  transition: width 1s;
+}
+
