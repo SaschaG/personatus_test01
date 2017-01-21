@@ -36,7 +36,6 @@ body{
 .navbar{
 	background-color: @main-color;
 	color: @sub-color-1;
-	height: 60px;
 	position: fixed;
 	width: 100%;
 	top: 0;
@@ -45,15 +44,69 @@ body{
 
 
 .nav{
-	padding-top:32px; 
+	//padding-top:66px; 
 }
 
 .initials{
 	color: @sub-color-2;
 	font-family: @font-headline-1;
+	font-size: 36pt;	
 	text-align: center;
-	font-size: 36pt;
+	cursor: pointer;
+	position: relative;
+
+	transition: color 0.5s;
+	p{
+		font-size:10pt;
+		position: relative;
+		margin: 0;
+		margin-bottom: 5px;
+	}
 }
+
+.logo{
+	
+}
+
+.initials:hover{
+	color: @sub-color-1;
+	transition: color 0.5s;
+}
+
+.profile{
+	visibility: hidden;
+	position: absolute;
+	width: 100%;
+	min-width: 250px;
+	height: 200px;
+	background-color: @main-color;
+	transition: height 0.5s;
+	text-align: center;
+	h4{
+		text-align: center;
+	}
+	h2{
+		text-align: center;
+	}
+	p{
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+} 
+
+.profile-pic{
+	overflow: hidden;
+}
+
+
+.initials:hover .profile{
+	visibility: visible;
+	opacity: 1;
+	display: block;
+	height: 620px;
+	box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+	transition: height 0.5s;
+} 
 
 
 .menu{
