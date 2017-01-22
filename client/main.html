@@ -81,21 +81,22 @@
       <div class="resume-switchbar">
         <ul>
           <li>
+            <input type="radio" id="portfolio" name="l-to-p" checked="checked"/>
+            <label for="portfolio"><div class="checked"></div> Portfolio</label>
+          </li>
+          <li>
             <input type="radio" id="lebenslauf" name="l-to-p" />
             <label for="lebenslauf"><div class="checked"></div> Lebenslauf</label>
           </li>
-        <li>
-            <input type="radio" id="portfolio" name="l-to-p" />
-            <label for="portfolio"><div class="checked"></div> Portfolio</label>
-        </li>
       </ul>
+      {{checked}}
     </div>
   </div>
 
     <div class ="col-mobile-12 content">
       <!-- insert content here -->
       <h1>This Website is under construction!</h1>
-
+      {{>portfolio}}
       {{>irum}}
     </div>
   </div>
@@ -107,6 +108,13 @@
       <!-- insert Footer here -->
       Footer
     </div>
+  </div>
+</template>
+
+
+<template name="portfolio">
+  <div id="content-portfolio">
+    Portfolio
   </div>
 </template>
 
