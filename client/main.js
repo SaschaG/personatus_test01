@@ -20,10 +20,12 @@ Template.content.events({
 if(template.$('#lebenslauf').is(":checked")){
 	$("#content-lebenslauf").css("display", "block");
 	$("#content-portfolio").css("display", "none");
+	$("#title").text("Lebenslauf");
 }
 else{
 	$("#content-lebenslauf").css("display", "none");
 	$("#content-portfolio").css("display", "block");
+	$("#title").text("Portfolio");
 }
 	
   },
