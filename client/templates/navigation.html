@@ -1,0 +1,65 @@
+<template name="navbar">
+
+  <div class="navbar">
+    <div class ="row">
+      <div class="col-mobile-12">
+        <div class="col-mobile-4 col-tablet-3 col-desktop-2 initials">
+          {{> logo}}
+        </div>
+
+        <div class="col-mobile-8  col-tablet-9 col-desktop-10 nav">
+          {{> nav}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</template>
+
+
+
+<template name="logo">
+  SG
+
+  <div class="profile">
+    <img class="profile-pic responsive" src="images/profile.png">
+      <h2>Profil</h2>
+      <h4>Name</h4>
+      <p>Sascha Gundel</p>
+
+      <h4>Adresse</h4>
+      <p>Oertzweg 22 <br>22307 Hamburg </p>
+      
+      <h4>Mobil</h4>
+      <p>0176 538 46 338</p>
+
+      <h4>E-Mail</h4>
+      <p>sascha.gundel@gmail.com</p>
+  </div>
+
+</template>
+
+
+
+<template name="nav">
+  <div class="col-mobile-12 hidden-desktop">
+    Burger Menu
+  </div>
+
+  <div class="col-desktop-12 visible-desktop">
+    <ul>
+      <li>
+        <a href="#"> Home </a>
+      </li>
+      <li>
+        <a href="#"> Front End </a>
+      </li>
+      <li>
+        <a href="#"> Games </a>
+      </li>
+      <li>
+        <a href="#"> Kontakt </a>
+      </li>
+    </ul>
+  </div>
+</template>
